@@ -1,0 +1,20 @@
+
+As a player I want to be able to interact with my items so that I can customize my character.
+As a player I want to be able to use items so that i can alter/trigger events in the game.
+As a player I want to play online so that I can have fun with my friends.
+As a player I want to be able to save my current progress so that I can continue playing at a different time.
+As a player I want to be able to talk, fight and trade with other players and every NPC's so that I can have different kinds of ways to play the game. 
+As a player I want to be able to play with my mouse and keyboard so that I can easiely navigate through the map and game elements.  
+As a player I want to have an event log so that I can review older events for useful information.
+As a player I want to have different kinds of stats so that I can have freedom to build the character in different ways.
+As a player I want to have a way to see my current stats so that I can make wise decisions while playing.
+
+
+As a customer I want to have a NetHack clone in 2D with an Retro art style to attract players that enjoy nostalgical games. 
+As a customer I want the game to have modern day game elements to appeal a younger generation of players.
+As a customer I want the game to be playable online so that the game can be played with more than just one player. 
+As a customer I want to have a colorfull interactive world so that the players will have a positive gaming experience.
+As a customer I want the background music and event music to fit with the current enviroment and event so that the player will have an enriched gaming experience. 
+As a customer I want the maps to be randomly generated so that the players can have different experiences.
+As a customer I want the game to have a increasing difficulty so that the game will not be too easy.
+
