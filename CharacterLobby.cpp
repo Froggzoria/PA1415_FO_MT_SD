@@ -1,17 +1,5 @@
 #include "CharacterLobby.h"
 
-void CharacterLobby::fontSetup()
-{
-	if (!fnt0.loadFromFile("../Assets/Font/ITCBLKAD.TTF"))
-		std::cout << "ERROR: Failed to load font" << std::endl;
-}
-
-void CharacterLobby::backgroundSetup()
-{
-	if (!bImage.loadFromFile("../Assets/Texture/background.png"))
-		std::cout << "ERROR: Failed to load font" << std::endl;
-}
-
 void CharacterLobby::initializeVariables()
 {
 	this->raceSelected = false;
@@ -25,28 +13,28 @@ void CharacterLobby::initializeVariables()
 	}
 }
 
-void CharacterLobby::buildMenu()
+void CharacterLobby::buildMenu(sf::Font& font, sf::Texture& backgroundImg)
 {
 	//Font & Size
-	this->nrOfAttributePoints.setFont(fnt0);
-	this->description.setFont(fnt0);
+	this->nrOfAttributePoints.setFont(font);
+	this->description.setFont(font);
 	for (int i = 0; i < TITLES; i++)
 	{
-		this->titles[i].setFont(fnt0);
+		this->titles[i].setFont(font);
 		this->titles[i].setCharacterSize(80);
 	}
 	for (int i = 0; i < RACES; i++)
 	{
-		this->raceOptions[i].setFont(fnt0);
+		this->raceOptions[i].setFont(font);
 	}
 	for (int i = 0; i < CLASSES; i++)
 	{
-		this->classOptions[i].setFont(fnt0);
+		this->classOptions[i].setFont(font);
 	}
 	for (int i = 0; i < ATTRIBUTES; i++)
 	{
-		this->attributeOptions[i].setFont(fnt0);
-		this->attributePrints[i].setFont(fnt0);
+		this->attributeOptions[i].setFont(font);
+		this->attributePrints[i].setFont(font);
 	}
 	//Header
 	this->titles[0].setString("Choose a Race");
@@ -112,16 +100,22 @@ void CharacterLobby::buildMenu()
 	this->attributePrints[5].setPosition(200, 600);
 
 	//Background
-	this->background.setTexture(this->bImage);
+	this->background.setTexture(backgroundImg);
 }
 
 CharacterLobby::CharacterLobby()
 {
-	fontSetup();
-	backgroundSetup();
+	/*loadFont();
+	loadBackground();
 	initializeVariables();
 	buildMenu();
-	this->catalogue = Catalogue();
+	this->catalogue = Catalogue();*/
+}
+
+CharacterLobby::CharacterLobby(sf::Font& font, sf::Texture& backgroundImg)
+{
+	initializeVariables();
+	buildMenu(font, backgroundImg);
 }
 
 CharacterLobby::~CharacterLobby()

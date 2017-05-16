@@ -8,11 +8,18 @@
 
 static const int TITLES = 4;
 
+/*
+how to use
+create Menu object first
+create CharacterLobby object in Game class
+use Menu.getFont() and Menu.getBackgroungImg() in constructor
+call update() - return value(gamestate) to Game class
+call draw()
+
+*/
 class CharacterLobby : public sf::Drawable
 {
 private:
-	sf::Font fnt0;
-	sf::Texture bImage;
 	sf::Sprite background;
 	sf::Text description;
 	sf::Text nrOfAttributePoints;
@@ -35,11 +42,10 @@ private:
 	int attributePoints;
 	
 	void initializeVariables();
-	void buildMenu();
-	void fontSetup();
-	void backgroundSetup();
+	void buildMenu(sf::Font& font, sf::Texture& backgroundImg);
 public:
 	CharacterLobby();
+	CharacterLobby(sf::Font& font, sf::Texture& backgroundImg);
 	~CharacterLobby();
 
 	void selectRace(int choice);

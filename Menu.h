@@ -5,10 +5,15 @@
 #include<Windows.h>
 //-----TEMP CONSOLE-----
 #include<iostream>
-//-----TENO CONSOLE-----
 
 static const int MENU_SIZE = 5;
 
+/*
+how to use
+create a Menu Object in Game class.
+call update() function and return value(gamestate) to Game class 
+and ur done
+*/
 class Menu : public sf::Drawable
 {
 private:
@@ -30,6 +35,7 @@ public:
 	~Menu();
 
 	sf::Texture& getBackgroundImg();
+	sf::Font& getFont();
 	void selectOption();
 	void updateCurrent(sf::Vector2i mousePos);
 	int update(sf::Vector2i mousePos);

@@ -55,8 +55,6 @@ Menu::Menu()
 	loadBackground();
 	initializeVariables();
 	buildMenu();
-	
-
 }
 
 Menu::~Menu()
@@ -67,6 +65,11 @@ Menu::~Menu()
 sf::Texture & Menu::getBackgroundImg()
 {
 	return this->bImage;
+}
+
+sf::Font & Menu::getFont()
+{
+	return this->fnt0;
 }
 
 void Menu::selectOption()
